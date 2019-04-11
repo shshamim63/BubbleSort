@@ -3,7 +3,7 @@ Applied some knowledge learned from the ruby course
 and made a Bubble Sort which is ready to use for both 
 numbers and strings
 
-#Pseudocode (optimized)
+# Pseudocode (optimized)
 procedure bubbleSort(Array)
     n=Array.length-1
     repeat
@@ -17,4 +17,4 @@ procedure bubbleSort(Array)
         n = n - 1
     until not swapped
 end procedure
-**collected from [Wikipedia](https://en.wikipedia.org/wiki/Bubble_sort)**
+** collected from [Wikipedia](https://en.wikipedia.org/wiki/Bubble_sort) **
