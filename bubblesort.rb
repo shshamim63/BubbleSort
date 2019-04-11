@@ -11,7 +11,7 @@ def bubble_sort(array)
     n -= 1
     break unless swapped
   end
-  array
+  return array
 end
 
 def bubble_sort_by(array)
@@ -27,9 +27,37 @@ def bubble_sort_by(array)
     n -= 1
     break unless swapped
   end
-  array
+  return array
 end
-print bubble_sort([2,1,5,4])
-print bubble_sort_by(["hi","hello","hey"]) { |left,right|
-  left.length <=> right.length
-}
+print "Optins 1.Sort numbers  2. Sort strings "
+print "Enter your choice: "
+choice = gets.chomp.to_i
+if choice == 1 
+  print "Enter the number of element: "
+  num_element = gets.chomp.to_i
+  i = 0
+  array = []
+  while i < num_element do
+    print "Add #{i}th number element: "
+    num = gets.chomp.to_i
+    array.push(num)
+    i += 1
+  end
+  print bubble_sort(array)
+elsif choice == 2 
+  print "Enter the number of element: "
+  num_element = gets.chomp.to_i
+  i = 0
+  array = []
+  while i < num_element do
+    print "Add #{i}th number element: "
+    str = gets.chomp.to_s
+    array.push(str)
+    i += 1
+  end
+  print bubble_sort_by(array) { |left,right|
+    left.length <=> right.length
+  }
+else
+  print "Invalid input"
+end
