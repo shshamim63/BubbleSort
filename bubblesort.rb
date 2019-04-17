@@ -24,9 +24,6 @@ def bubble_sort_by(array)
           array[i], array[i + 1] = array[i + 1], array[i]
           swapped = true
         end
-      elsif array[i] > array[i + 1]
-        array[i], array[i + 1] = array[i + 1], array[i]
-        swapped = true
       end
     end
     n -= 1
@@ -39,7 +36,9 @@ array_num = [6,8,5,9,7,4,5,1,2,10]
 
 
 print bubble_sort(array_num)
+puts ""
 print bubble_sort_by(array_str) { |left,right|
   left.length <=> right.length
 }
-print bubble_sort_by(array_num){|a,b| a-b}
+puts ""
+print bubble_sort_by(array_num){|a,b| b-a}
